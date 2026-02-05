@@ -1,0 +1,13 @@
+{
+  "name": "guvi-api-endpoint",
+  "version": "1.0.0",
+  "description": "Hackathon API Fix",
+  "main": "api/evaluate.js",
+  "scripts": {
+    "test": "node test-runner.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
