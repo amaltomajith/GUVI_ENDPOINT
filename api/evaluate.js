@@ -18,7 +18,7 @@ export default async function handler(req, res) {
 
   // --- CONFIGURATION ---
   // PASTE YOUR GROQ KEY HERE (Inside quotes)
-  const GROQ_KEY = "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"; 
+  const GROQ_KEY = ""; 
   // ---------------------
 
   // 2. SAFE PARSING (Fixes 400 Error)
