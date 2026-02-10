@@ -26,7 +26,7 @@ export default async function handler(req, res) {
 
   // --- CONFIGURATION ---
   // PASTE YOUR GROQ KEY BELOW
-  const GROQ_KEY = "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"; 
+  const GROQ_KEY = "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"; 
   // ---------------------
 
   // Safe Parsing for Empty Pings
