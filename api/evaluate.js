@@ -8,11 +8,8 @@ export default async function handler(req, res) {
 
   if (req.method === 'OPTIONS') return res.status(200).end();
 
-  // --- 🔒 SECURITY GATE (POINTS BOOSTER) ---
-  // The Judge MUST send this exact key to get in.
+  // --- 🔒 SECURITY GATE ---
   const HACKATHON_PASSWORD = "guvi-secure-pass-2026"; 
-  
-  // We check multiple header types to be safe
   const incomingAuth = req.headers['authorization'] || req.headers['apikey'] || req.headers['x-api-key'] || "";
   
   if (!incomingAuth.includes(HACKATHON_PASSWORD)) {
@@ -22,11 +19,10 @@ export default async function handler(req, res) {
       extracted_intelligence: "Access Denied: Invalid API Key" 
     });
   }
-  // ------------------------------------------
 
   // --- CONFIGURATION ---
-  // PASTE YOUR GROQ KEY BELOW
-  const GROQ_KEY = "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"; 
+  // ✅ FIX: Read from Environment Variable to satisfy GitHub Security
+  const GROQ_KEY = process.env.GROQ_API_KEY; 
   // ---------------------
 
   // Safe Parsing for Empty Pings
